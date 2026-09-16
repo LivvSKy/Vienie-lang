@@ -1,0 +1,65 @@
+// Vienie Complete Language Example
+// This is an experimental language, maybe will be changed
+
+// 1. Primitive Declarations & Strings
+let title = "Vienie"
+let active = true
+let count = 3
+
+say "--- Running " + title + " ---"
+
+// 2. Object Literals and Property Access
+let config = {
+    env: "development",
+    version: 0.3,
+    debug: true
+}
+
+say "Environment: " + config.env
+say "Debug Mode: " + config.debug
+
+// Property Mutation
+config.env = "production"
+say "Updated Environment: " + config.env
+
+// 3. Array Literals and Indexing
+let scores = [88, 92, 97]
+say "Initial First Score: " + scores[0]
+
+// Array Element Mutation
+scores[0] = 95
+say "Updated First Score: " + scores[0]
+
+// 4. Function Declaration (make) & Return (give)
+make calculateBonus(baseScore, multiplier) {
+    let result = baseScore * multiplier
+    give result
+}
+
+let finalScore = calculateBonus(scores[0], 2)
+say "Calculated Bonus Score: " + finalScore
+
+// 5. Control Flow (if / otherwise)
+if finalScore > 150 {
+    say "Status: High Performer"
+} otherwise {
+    say "Status: Standard Performer"
+}
+
+// 6. Iteration (each ... in)
+say "All Scores:"
+each item in scores {
+    say "Score: " + item
+}
+
+// 7. Loop Execution (repeat)
+say "Executing repetition loop..."
+repeat count {
+    say "Vienie iteration active!"
+}
+
+// 8. Synchronous Input (ask)
+let userInput = ask "Enter custom tag: "
+say "You entered tag: " + userInput
+
+say "--- Feature Showcase Complete ---"

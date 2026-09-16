@@ -1,0 +1,10 @@
+{
+  "name":"veyra-language-support",
+  "displayName":"Veyra Language Support",
+  "description":"Syntax highlighting for the Veyra programming language",
+  "version":"0.2.0",
+  "publisher":"livvsky",
+  "engines":{"vscode":"^1.80.0"},
+  "categories":["Programming Languages"],
+  "contributes":{"languages":[{"id":"veyra","aliases":["Veyra","vey"],"extensions":[".vey"],"configuration":"./language-configuration.json"}],"grammars":[{"language":"veyra","scopeName":"source.veyra","path":"./syntaxes/veyra.tmLanguage.json"}]}
+}

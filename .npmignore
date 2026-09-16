@@ -1,0 +1,8 @@
+.gitignore
+.git/
+examples/
+.nano/
+editors/
+tests/
+*.log
+

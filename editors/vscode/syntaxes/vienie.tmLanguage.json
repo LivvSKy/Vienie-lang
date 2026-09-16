@@ -1,0 +1,93 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Vienie",
+  "scopeName": "source.vie",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#declarations" },
+    { "include": "#io-builtins" },
+    { "include": "#control-flow" },
+    { "include": "#returns" },
+    { "include": "#booleans" },
+    { "include": "#numbers" },
+    { "include": "#strings" },
+    { "include": "#function-declarations" },
+    { "include": "#function-calls" },
+    { "include": "#operators" },
+    { "include": "#delimiters" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [{ "name": "comment.line.double-slash.vienie", "match": "//.*$" }]
+    },
+    "declarations": {
+      "patterns": [
+        { "name": "keyword.declaration.vienie storage.type.vienie", "match": "\\blet\\b" },
+        { "name": "keyword.declaration.vienie storage.type.function.vienie", "match": "\\bmake\\b" }
+      ]
+    },
+    "io-builtins": {
+      "patterns": [{ "name": "support.function.builtin.vienie entity.name.function.say.vienie", "match": "\\b(say|ask)\\b" }]
+    },
+    "control-flow": {
+      "patterns": [
+        { "name": "keyword.control.conditional.vienie", "match": "\\b(if|otherwise)\\b" },
+        { "name": "keyword.control.loop.vienie", "match": "\\b(repeat|each|in)\\b" }
+      ]
+    },
+    "returns": {
+      "patterns": [{ "name": "keyword.control.flow.return.vienie", "match": "\\bgive\\b" }]
+    },
+    "booleans": {
+      "patterns": [{ "name": "constant.language.boolean.vienie", "match": "\\b(true|false)\\b" }]
+    },
+    "numbers": {
+      "patterns": [{ "name": "constant.numeric.vienie", "match": "\\b[0-9]+(\\.[0-9]+)?\\b" }]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.vienie",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [{ "name": "constant.character.escape.vienie", "match": "\\\\." }]
+        },
+        {
+          "name": "string.quoted.single.vienie",
+          "begin": "'",
+          "end": "'",
+          "patterns": [{ "name": "constant.character.escape.vienie", "match": "\\\\." }]
+        }
+      ]
+    },
+    "function-declarations": {
+      "patterns": [
+        {
+          "match": "\\b(make)\\s+([a-zA-Z_][a-zA-Z0-9_]*)",
+          "captures": {
+            "1": { "name": "keyword.declaration.vienie storage.type.function.vienie" },
+            "2": { "name": "entity.name.function.vienie" }
+          }
+        }
+      ]
+    },
+    "function-calls": {
+      "patterns": [
+        {
+          "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\s*(?=\\()",
+          "captures": { "1": { "name": "entity.name.function.vienie" } }
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [{ "name": "keyword.operator.vienie", "match": "(\\+|\\-|\\*|\\/|==|!=|<=|>=|<|>|=)" }]
+    },
+    "delimiters": {
+      "patterns": [
+        { "name": "punctuation.separator.vienie", "match": "(\\.|,|:)" },
+        { "name": "punctuation.section.vienie", "match": "(\\{|\\}|\\[|\\]|\\(|\\))" }
+      ]
+    }
+  }
+}
+

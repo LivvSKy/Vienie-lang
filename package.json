@@ -1,0 +1,23 @@
+{
+  "name": "vienie",
+  "version": "0.3.0",
+  "description": "A lightweight, expressive scripting runtime built for fast execution.",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "vienie": "bin/vienie.js"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "vienie",
+    "scripting",
+    "runtime",
+    "cli",
+    "lightweight"
+  ],
+  "author": "Livvsky",
+  "license": "MIT"
+}
+
