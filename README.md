@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <strong>Version 0.3.0</strong>
+  <strong>Version 0.3.1</strong>
 </p>
 
 Vienie is a lightweight programming language with readable syntax, variables, functions, conditions, loops, collections, input/output, and a simple execution pipeline.
@@ -30,6 +30,24 @@ Run a program:
 
 ```bash
 vienie program.vie
+```
+
+## Commands
+
+Setup highlighting syntax for nano:
+
+```bash
+vienie --setup-nano
+```
+
+Setup Highlighting syntax for vscode:
+```bash
+vienie --setup-vscode
+```
+
+For any other command use:
+```bash
+vienie -h
 ```
 
 ## Quick Start
@@ -167,11 +185,17 @@ say multiply(6, 7)
 
 ## Project Status
 
-Current version: **0.3.0**
+Current version: **0.3.1**
 
 Vienie is actively evolving. Future releases may expand the standard library, tooling, editor support, and language features while keeping the syntax focused and readable.
 
 ## Changelog
+
+### 0.3.1
+
+- Added syntax highlighting for nano
+- Added syntax highlighting for vscode
+- More vienie CLI commands 
 
 ### 0.3.0
 
